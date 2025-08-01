@@ -260,6 +260,11 @@ div#mainBtns button{
     width: 85px;
 }
 
+.slider-prev,
+    .slider-next {
+        opacity: 0;
+    }
+
 .Hd span{
     font-size: 18px;
 }
@@ -1370,7 +1375,7 @@ form div#flx input[type="text"] {
     }
     
     .Hd {
-        flex-direction: column;
+        flex-direction: row;
         gap: 15px;
         text-align: center;
     }
@@ -1520,6 +1525,7 @@ form div#flx input[type="text"] {
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         transition: all 0.3s ease;
         z-index: 10;
+        opacity: 1;
     }
     
     .slider-prev {
@@ -2173,6 +2179,10 @@ a#addbs button {
         padding: 0 20px;
     }
     
+    .Hd{
+        flex-direction: row;
+    }
+
     .slider-dot {
         width: 8px;
         height: 8px;
@@ -2211,14 +2221,17 @@ a#addbs button {
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         transition: all 0.3s ease;
         z-index: 10;
+        opacity: 1;
     }
     
     .slider-prev {
         left: 10px;
+        opacity: 0;
     }
     
     .slider-next {
         right: 10px;
+        opacity: 0;
     }
     
     .slider-prev:hover,
