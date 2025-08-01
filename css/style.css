@@ -217,7 +217,8 @@ form button{
 div#mainBtns {
     display: flex;
     width: 45%;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
     align-items: center;   
     padding: 4% 0 9%;
 }
@@ -1075,45 +1076,116 @@ footer hr{
     justify-content: space-between;
 }
 
+.hmprjC{
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    overflow: hidden;
+
+    &:hover{
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.crdbtn{
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -37%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    &:hover{
+        color: #ffff;
+        background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(17, 24, 39, 0.3);
+        border-color: #111827;
+
+        &::before {
+            left: 100%;
+        }
+    }
+}
+
+.cItm {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+/* Small mobile responsive improvements */
 @media screen and (max-width: 425px) {
     #popular{
-        flex-direction: column;
-        align-items: center;
+        padding: 4% 2%;
     }
 
     #side{
-        width: 100%;
+        margin: 15px 5px;
+        padding: 15px;
     }
+
     #prjLst{
-        flex-direction: column;
-        align-items: center;
+        gap: 15px;
     }
 
     .prjItm{
-        width: 100%;
+        min-height: 180px;
     }
-    
+
     #itmsPros{
-        flex-direction: column;
-        align-items: flex-start;
+        gap: 10px;
     }
 
     .itms{
-        width: 100%;
+        padding: 15px;
+        min-height: 80px;
     }
-    
+
     #itmsPros .itms .icnPros {
-        background-color: transparent;
-        border-radius:0px;
-        height: 29px;;
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
     }
 
     .Hd .Veiw{
-        width: 25%;
+        width: 100%;
     }
 
     .Hd h2{
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .Hd span{
@@ -1121,7 +1193,1108 @@ footer hr{
     }
 
     #home h1 {
+        font-size: 28px;
+        width: 95%;
+        padding: 8% 0 2%;
+    }
+
+    header {
+        padding: 6px 10px;
+    }
+
+    #lgo img {
+        width: 32px;
+        padding: 4px;
+    }
+
+    #lgo span {
+        font-size: 18px;
+    }
+
+    #joinBtn {
+        width: 100px;
+        padding: 8px 12px;
+        font-size: 13px;
+        min-height: 40px;
+    }
+
+    form {
+        margin: 0 5px;
+        width: calc(100% - 10px);
+        padding: 15px;
+    }
+
+    form div#flx input[type="search"],
+    form div#flx input[type="text"] {
+        padding: 12px;
+        font-size: 16px;
+        min-height: 44px;
+    }
+
+    form button {
+        padding: 12px;
+        font-size: 15px;
+        min-height: 44px;
+    }
+
+    div#mainBtns button {
+        padding: 12px;
+        font-size: 15px;
+        min-height: 44px;
+    }
+
+    .Hd h2 {
+        font-size: 22px;
+    }
+
+    #side h3 {
+        font-size: 20px;
+    }
+
+    #howitwrk h2 {
+        font-size: 22px;
+    }
+
+    #pro h2 {
+        font-size: 22px;
+    }
+
+    #appD h2 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    header {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+    }
+    
+    #lgo span {
+        font-size: 18px;
+    }
+    
+    header nav {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+    }
+    
+    header nav.active {
+        display: block;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    header nav ul li {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    div#icn {
+        width: auto;
+        gap: 15px;
+    }
+    
+    #joinBtn {
+        width: 120px;
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    #home {
+        background-size: 0%;
+        background-position: center 100px;
+        padding: 0 20px;
+    }
+    
+    #home h1 {
+        font-size: 36px;
+        width: 100%;
+        padding: 25% 0 5%;
+    }
+    
+    form {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        background-color: #ffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        margin: 0 10px;
+    }
+    
+    form div#flx {
+        width: 100%;
+        gap: 15px;
+    }
+    
+    form div#flx input[type="search"],
+form div#flx input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+}
+    
+    form button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    div#mainBtns {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    div#mainBtns button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+    
+    #pros {
+        padding: 6% 4% 4%;
+    }
+    
+    .Hd {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .Hd h2 {
         font-size: 24px;
-        padding: 34% 0 2.9%;
+    }
+    
+    .Hd .Veiw {
+        width: 18%;
+    }
+    
+    #itmsPros {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #itmsPros .itms {
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    #itmsPros .itms .icnPros {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+    
+    section#popular {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    #side {
+        width: 100%;
+    }
+    
+    #side h3 {
+        font-size: 20px;
+        width: 100%;
+        padding: 10% 5% 2% 5%;
+    }
+    
+    #side p {
+        padding: 0 5%;
+    }
+    
+    #prj {
+        width: 100%;
+        padding: 3% 0% 0% 0%;
+    }
+    
+    #prjLst {
+        flex-direction: column;
+        gap: 20px;
+        padding-right: 0;
+    }
+    
+    .prjItm {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .prg {
+        width: 100%;
+        padding: 0;
+    }
+    
+    #hmprj {
+        padding: 6% 4% 7%;
+    }
+    
+    #hmprjCrds {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        gap: 16px;
+        padding: 0 20px;
+        margin: 0 -20px;
+    }
+    
+    #hmprjCrds::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    
+    .hmprjC {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        padding: 16px;
+    }
+    
+    .hmprjC:hover {
+        transform: translateY(-4px);
+    }
+    
+    /* Slider navigation dots */
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 24px;
+        padding: 0 20px;
+    }
+    
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .slider-dot.active {
+        background-color: #d85151;
+    }
+    
+    /* Slider navigation arrows */
+    .slider-nav {
+        position: relative;
+        margin: 0 -20px;
+    }
+    
+    .slider-prev,
+    .slider-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #333;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+    
+    .slider-prev {
+        left: 10px;
+    }
+    
+    .slider-next {
+        right: 10px;
+    }
+    
+    .slider-prev:hover,
+    .slider-next:hover {
+        background: #ffffff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .slider-prev:active,
+    .slider-next:active {
+        transform: translateY(-50%) scale(0.95);
+    }
+    
+    .crdinfo {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .rt {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #exprt {
+        padding: 7% 4% 4%;
+    }
+    
+    #exDt {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .exitm {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .excnt {
+        padding-left: 0;
+    }
+    
+    #hw {
+        padding: 6% 4%;
+    }
+    
+    #howitwrk h2 {
+        font-size: 28px;
+    }
+    
+    #howitwrk p {
+        font-size: 16px;
+    }
+    
+    #ans {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .ansItm {
+        width: 100%;
+    }
+    
+    #pro {
+        padding: 8% 4%;
+        text-align: center;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    #pro h2 {
+        width: 100%;
+        font-size: 24px;
+    }
+    
+    #probtn {
+        width: 100%;
+        gap: 19px;
+        justify-content: center;
+    }
+
+
+    
+    #app {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+        margin: 50px auto;
+    }
+    
+    #appCntct {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    #appD h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    
+    #appBtn {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    #appBtn a button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        min-height: 50px;
+    }
+    
+    #cprice {
+        padding: 0 4% 4%;
+    }
+    
+    #cpricLst {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .cItm {
+        width: 100%;
+        min-height: 120px;
+        padding: 20px;
+    }
+    
+    .cimg {
+        width: 100%;
+    }
+    
+    .ctxt {
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    footer {
+        padding: 40px 20px;
+    }
+    
+    #sbs {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    #rghtS,
+    #lftS {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    #ftLstUp {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    #uplft {
+        width: 100%;
+    }
+    
+    #uplft p {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .uplst {
+        width: 100%;
+    }
+    
+    .uplstD {
+        width: 100%;
+    }
+    
+    .uplstD ul {
+        height: auto;
+        gap: 10px;
+    }
+    
+    #cty {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    #cty div {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    #pay {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    #pay #icn {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    div#company {
+    justify-content: center;
+}
+
+#cpricLst .cItm .ctxt .rt {
+    padding: 2px 0 47px;
+    display: flex;
+    justify-content: space-between;
+    width: 71%;
+}
+
+.ctxt {
+        width: 100%;
+        padding-left: 6%;
+    }
+
+    .eximg {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 220px;
+    width: 41%;
+}
+
+.prjImg img {
+    width: 100%;
+}
+
+a#lm button{
+    border: 2px solid #ffff;
+    color: #ffff;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 16px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.95);
+        color: #4E5562;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        border-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+a#addbs button {
+    padding: 14px 15px;
+}
+
+    #appBtn {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    #uplft p {
+        width: 79%;
+        text-align: left;
+        margin: 0;
+    }
+
+    .uplst h3 {
+    font-size: 19px;
+    padding: 3% ;
+    }
+
+}
+
+/* Tablet responsive improvements */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header {
+        padding: 8px 20px;
+    }
+
+    header nav {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    header nav ul li {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+
+    #joinBtn {
+        width: 150px;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    form {
+        background-color: #ffff;
+        border-radius: 12px;
+        padding: 10px;
+        width: 90%;
+        max-width: 460px;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    form div#flx {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    form div#flx input[type="search"],
+    form div#flx input[type="text"] {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        background-color: #f9f9f9;
+    }
+
+    form button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: 600;
+        min-height: 50px;
+    }
+
+    #home h1 {
+        font-size: 36px;
+        width: 60%;
+        padding: 12% 0 2%;
+    }
+
+    form {
+        margin: 0 auto;
+    }
+
+    form div#flx {
+        width: 100%;
+    }
+
+    form div#flx input[type="search"],
+    form div#flx input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    div#mainBtns {
+        width: 60%;
+        gap: 15px;
+    }
+
+    div#mainBtns button {
+        padding: 12px 20px;
+        font-size: 14px;
+        min-height: 44px;
+    }
+
+    #pros {
+        padding: 6% 3% 4%;
+    }
+
+    #itmsPros {
+        gap: 20px;
+    }
+
+    #itmsPros .itms {
+        padding: 20px;
+        min-height: 120px;
+    }
+
+    section#popular {
+        padding: 6% 3%;
+    }
+
+    #side {
+        padding: 30px;
+    }
+
+    #prj {
+        padding: 6% 3%;
+    }
+
+    #prjLst {
+        gap: 20px;
+    }
+
+    .prjItm {
+        min-height: 200px;
+    }
+
+    #hmprjCrds {
+        gap: 20px;
+    }
+
+    .hmprjC {
+        min-height: 250px;
+    }
+
+    #exDt {
+        gap: 20px;
+    }
+
+    .exitm {
+        width: 48%;
+        min-height: 180px;
+    }
+
+    #ans {
+        gap: 30px;
+    }
+
+    .ansItm {
+        padding: 20px;
+        min-height: 100px;
+    }
+
+    #app {
+        margin: 80px auto;
+        height: 280px;
+    }
+
+    #appCntct {
+        padding: 30px;
+    }
+
+    #appD h2 {
+        font-size: 28px;
+    }
+
+    #appBtn {
+        width: 280px;
+    }
+
+    #appBtn a button {
+        width: 130px;
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+
+    #cpricLst {
+        gap: 20px;
+    }
+
+    .cItm {
+        width: 48%;
+        min-height: 120px;
+    }
+
+    #ftLstUp {
+        gap: 30px;
+    }
+
+    #uplft {
+        width: 25%;
+    }
+
+    .uplst {
+        width: 22%;
+    }
+
+    #cty div {
+        gap: 10px;
+    }
+
+    #cty div .ctyBtn {
+        padding: 8px 16px;
+        font-size: 14px;
+        min-height: 40px;
+    }
+
+    #sbs {
+    font-size: 16px;
+    }
+
+    #rghtS {
+        width: 395.547px;
+    }
+
+    #lftS{
+        width: 210.953px;
+    }
+
+    #cpricLst .cItm .ctxt .rt {
+        padding: 2px 0 5px;
+    }
+
+    #pro {
+        padding:5%;
+        background-color: rgb(61 122 129);
+        display: flex;
+        background-image: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pro h2 {
+        width: 66%;
+        text-align: center;
+    }
+
+    #probtn {
+        width: 46%;
+    }
+
+    #probtn a button {
+        font-size: 16px;
+    }
+
+    #howitwrk p {
+        font-size: 16px;
+    }
+
+    .excnt {
+        width: 165%;
+        font-size: 14px;
+    }
+
+    .eximg img {
+        width: 100%;
+        border-radius: 8px;
+        transition: transform 0.5s ease;
+        scale: 1.1;
+    }
+
+    .eximg{
+        height: auto;
+    }
+
+
+    /* popular section */
+
+    section#popular {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    #side {
+        width: 100%;
+    }
+    
+    #side h3 {
+        font-size: 20px;
+        width: 100%;
+        padding: 10% 5% 2% 5%;
+    }
+    
+    #side p {
+        padding: 0 5%;
+    }
+    
+    #prj {
+        width: 100%;
+        padding: 3% 0% 0% 0%;
+    }
+    
+    #prjLst {
+        gap: 20px;
+        padding-right: 0;
+    }
+    
+    .prjItm {
+        width: 48%;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .prjImg {
+        border-radius: 8px;
+        overflow: hidden;
+        width: 50%;
+        height: 123px;
+    }
+
+    .prjImg img {
+        width: 100%;
+       scale: 1.2;
+    }
+    
+    .prg {
+        width: 100%;
+        padding: 0;
+    }
+    
+    #hmprj {
+        padding: 6% 4% 7%;
+    }
+    
+    #hmprjCrds {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        gap: 16px;
+        padding: 0 20px;
+        margin: 0 -20px;
+    }
+    
+    #hmprjCrds::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    
+    .hmprjC {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        padding: 16px;
+    }
+    
+    .hmprjC:hover {
+        transform: translateY(-4px);
+    }
+    
+    /* Slider navigation dots */
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 24px;
+        padding: 0 20px;
+    }
+    
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .slider-dot.active {
+        background-color: #d85151;
+    }
+    
+    /* Slider navigation arrows */
+    .slider-nav {
+        position: relative;
+        margin: 0 -20px;
+    }
+    
+    .slider-prev,
+    .slider-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #333;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+    
+    .slider-prev {
+        left: 10px;
+    }
+    
+    .slider-next {
+        right: 10px;
+    }
+    
+    .slider-prev:hover,
+    .slider-next:hover {
+        background: #ffffff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .slider-prev:active,
+    .slider-next:active {
+        transform: translateY(-50%) scale(0.95);
+    }
+
+    div#mainBtns {
+        width: 100%;
+    }
+
+    form button {
+        width: 156.391px;
+    }
+
+    form{
+        flex-direction: row;
+    }
+
+        form div#flx {
+            flex-direction: row;
+        }
+
+    #home {
+        background-size: 196%;
+        background-position: -370px 135px;
+        padding: 11%;
+    }
+
+    .uplstD{
+        width: 147%;
+    }
+
+    .uplst h3 {
+    font-size: 17px;
+    padding: 9px 0 26px;
+}
+
+    #cty div {
+        gap: 10px;
+        justify-content: normal;
+    }
+
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+    
+    #home h1 {
+        font-size: 64px;
+        width: 50%;
+    }
+    
+    form {
+        width: 700px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) and (max-width: 1399px) {
+    #home h1 {
+        font-size: 56px;
+        width: 46%;
+    }
+    
+    form {
+        width: 634px;
     }
 }
