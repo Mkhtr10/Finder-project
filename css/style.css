@@ -1,9 +1,10 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 a{
     text-decoration: none;
     color: inherit;
@@ -12,6 +13,8 @@ a{
 input:focus {
   outline: none;
 }
+
+/* -------------------header---------------- */
 
 header{
     display: flex;
@@ -26,6 +29,7 @@ header{
     z-index: 99;
 }
 
+/* logo */
 #lgo{
     width: auto;
     display: flex;
@@ -42,6 +46,7 @@ header{
     font-weight: 600;
 }
 
+/* navication */
 header nav{
     width:767.594px;
 }
@@ -65,6 +70,8 @@ header nav ul li{
     }
 }
 
+
+/* header icon */
 div#icn{
     width: 7%;
     font-size: 16px;
@@ -86,11 +93,12 @@ div#icn i:hover{
   100% { transform: scale(1); }
 }
 
+
+/* join pro network */
 #joinBtn{
     background-color: #d85151;
     color: white;
-    width:177.094px;
-    padding: 0.7%;
+    padding: 1%;
     border-radius: 8px;
     transition:background-color linear 0.5s ;
 
@@ -105,7 +113,7 @@ div#icn i:hover{
   color: #ffff;
 }
 
-/* main page  */
+/* -------------------main page------------- */
 
 main{
     color: #111827;
@@ -131,6 +139,7 @@ main{
     padding: 15% 0 2.9%;
 }
 
+/* form */
 form{
     background-color: #ffff;
     border-radius: 12px;
@@ -214,6 +223,8 @@ form button{
     }
 }
 
+
+/* home buttons  */
 div#mainBtns {
     display: flex;
     width: 45%;
@@ -240,13 +251,14 @@ div#mainBtns button{
 
 }
 
-/* Browse pros section */
+/* -----------Browse pros  section*/
 
 #pros{
     color: #111827;
     padding: 8% 4% 5%;
 }
 
+/* header and view */
 .Hd{
     display: flex;
     justify-content: space-between;
@@ -260,6 +272,7 @@ div#mainBtns button{
     width: 85px;
 }
 
+/* ----slider */
 .slider-prev,
     .slider-next {
         opacity: 0;
@@ -309,7 +322,7 @@ div#mainBtns button{
    }
 }
 
-/* Popular projects */
+/* ----------Popular projects */
 section#popular {
     padding: 1% 4%;
     display: flex;
@@ -359,7 +372,7 @@ div#bkg {
     left: 65px;
 }
 
-/* Project */
+/* ----------Project section*/
 
 #prj {
     padding: 3% 0% 0% 11%;
@@ -428,7 +441,7 @@ div#bkg {
     font-size: 14px;
 }
 
-/* home project section */
+/* -----------home project section */
 #hmprj{
     padding: 6% 4% 7%;
 }
@@ -1028,6 +1041,7 @@ footer hr{
 #cty h3{
     font-size: 22px;
     padding-right: 2%;
+    padding-bottom: 14px;
 }
 
 #cty div{
@@ -1036,7 +1050,7 @@ footer hr{
     justify-content: space-between;
     flex-wrap: wrap;
     height: 95px;
-    width: 80%;
+    width: 100%;
 }
 
 #cty div .ctyBtn{
@@ -1056,6 +1070,8 @@ footer hr{
         transition: border-color linear 0.3s;
     }
 }
+
+/* footer bottom */
 
 #pay{
     display: flex;
@@ -1267,6 +1283,11 @@ footer hr{
     #appD h2 {
         font-size: 20px;
     }
+
+    #itmsPros .itms {
+        width: 45%;
+        padding: 10px 0;
+    }
 }
 
 
@@ -1311,7 +1332,7 @@ footer hr{
     #joinBtn {
         width: 120px;
         font-size: 12px;
-        padding: 8px 12px;
+        padding: 2%;
     }
     
     #home {
@@ -1343,14 +1364,14 @@ footer hr{
     }
     
     form div#flx input[type="search"],
-form div#flx input[type="text"] {
+    form div#flx input[type="text"] {
     width: 100%;
     padding: 12px;
     font-size: 14px;
     border-radius: 8px;
     border: 1px solid #e0e0e0;
     background-color: #f9f9f9;
-}
+    }
     
     form button {
         width: 100%;
@@ -1381,20 +1402,24 @@ form div#flx input[type="text"] {
     }
     
     .Hd h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     .Hd .Veiw {
         width: 18%;
     }
+
+    .Hd span {
+    font-size: 16px;
+}
     
     #itmsPros {
-        flex-direction: column;
+        flex-direction: row;
         gap: 15px;
     }
     
     #itmsPros .itms {
-        width: 100%;
+        width: 39%;
         padding: 10px 0;
     }
     
@@ -1685,6 +1710,7 @@ form div#flx input[type="text"] {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+        font-size: 16px;
     }
     
     #rghtS,
@@ -1716,6 +1742,7 @@ form div#flx input[type="text"] {
     
     .uplstD {
         width: 100%;
+        justify-content: space-evenly;
     }
     
     .uplstD ul {
@@ -1752,53 +1779,59 @@ form div#flx input[type="text"] {
     justify-content: center;
 }
 
-#cpricLst .cItm .ctxt .rt {
-    padding: 2px 0 47px;
-    display: flex;
-    justify-content: space-between;
-    width: 71%;
-}
-
-.ctxt {
+    #cpricLst .cItm .ctxt .rt {
+        padding: 2px 0 47px;
+        display: flex;
+        justify-content: space-between;
         width: 100%;
-        padding-left: 6%;
+    }
+
+    .ctxt {
+            width: 100%;
+            padding-left: 6%;
+        }
+
+    .ctxt .crdbtn{
+        padding: 6% 12%;
     }
 
     .eximg {
-    border-radius: 8px;
-    overflow: hidden;
-    height: 220px;
-    width: 41%;
-}
-
-.prjImg img {
-    width: 100%;
-}
-
-a#lm button{
-    border: 2px solid #ffff;
-    color: #ffff;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 16px 28px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-    &:hover{
-        background-color: rgba(255, 255, 255, 0.95);
-        color: #4E5562;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        border-color: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        overflow: hidden;
+        height: 220px;
+        width: 41%;
     }
-}
 
-a#addbs button {
-    padding: 14px 15px;
-}
+    .prjImg img {
+        width: 100%;
+    }
+
+    a#lm button{
+        border: 2px solid #ffff;
+        color: #ffff;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 16px 28px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #4E5562;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+
+    }
+
+    a#addbs button {
+        padding: 14px 15px;
+    }
 
     #appBtn {
         flex-direction: row;
@@ -1837,9 +1870,8 @@ a#addbs button {
     }
 
     #joinBtn {
-        width: 150px;
-        padding: 10px 20px;
-        font-size: 15px;
+        padding: 1%;
+        font-size: 14px;
     }
 
     form {
@@ -1920,6 +1952,7 @@ a#addbs button {
     #itmsPros .itms {
         padding: 20px;
         min-height: 120px;
+        width: 31%;
     }
 
     section#popular {
@@ -1928,6 +1961,18 @@ a#addbs button {
 
     #side {
         padding: 30px;
+    }
+
+
+    #circl{
+        width: 0px;
+    }
+
+    #side img {
+        width: 68%;
+        position: absolute;
+        top: 83px;
+        left: 296px;
     }
 
     #prj {
@@ -2093,7 +2138,7 @@ a#addbs button {
     }
     
     #side h3 {
-        font-size: 20px;
+        font-size: 30px;
         width: 100%;
         padding: 10% 5% 2% 5%;
     }
@@ -2262,8 +2307,8 @@ a#addbs button {
         }
 
     #home {
-        background-size: 196%;
-        background-position: -370px 135px;
+        background-size: contain;
+        background-position:50% 50%;
         padding: 11%;
     }
 
