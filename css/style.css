@@ -1168,7 +1168,137 @@ footer hr{
 
 
 /* Small mobile responsive improvements */
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 320px) and (max-width: 424px) {
+    header{
+        position: relative;
+    }
+
+    #joinBtn {
+        padding: 4% 5% !important;
+    }
+
+    #proNtwrk{
+        display: none;
+    }
+
+    #side{
+        width: 100%;
+    }
+
+    #side h3 {
+        font-size: 23px !important;
+    }
+
+    #circl{
+        display: none;
+    }
+
+    #side img{
+        top: 42%;
+        left: 13px;
+        width: 270px;
+    }
+
+    div#bkg {
+    height: 230px;
+    }
+
+    .Hd h2 {
+        font-size: 16px !important;
+    }
+
+    .Hd span {
+        font-size: 14px !important;
+    }
+
+    .Hd .Veiw {
+        width: 23% !important;
+    }
+    
+    #itmsPros{
+        justify-content: left;
+    }
+
+    #itmsPros .itms{
+        width: 47% !important;
+        font-size: 14px;
+    }
+
+        #howitwrk p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    #pay #icn {
+        gap: 3px !important;
+        width: 100% !important;
+    }
+
+    #hmprjCrds {
+        width: 100% !important;
+        margin: 0 24px !important;
+    }
+
+    .slider-nav {
+        width: 100% !important;
+        margin: 0;
+    }
+
+    .slider-prev {
+        left: 15px !important;
+    }
+
+    .slider-next {
+        right: -20px !important;
+    }
+
+    .hmprjC .ovrl {
+        h3 {
+            left: 16px;
+            font-size: 17px;
+        }
+    }
+
+    .slider-dots {
+        margin-left: 39px !important;
+    }
+
+    .eximg {
+        height: auto !important;
+    }
+
+    #exDt{
+        padding-top: 10%;
+    }
+
+        a#addbs button {
+        padding: 11px 11px;
+        font-size: 14px;
+    }
+
+    a#lm button{
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+    }
+
+    .cItm{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cimg img {
+        scale: 1;
+        border-radius: 10px;
+    }
+
+    #cpricLst .cItm .ctxt .rt {
+        padding: 2px 0 25px !important;
+    }
+}
+
+
+/* Small mobile responsive improvements */
+@media screen and (min-width: 425px) and (max-width: 766px) {
     #popular{
         padding: 4% 2%;
     }
@@ -1233,7 +1363,7 @@ footer hr{
 
     #joinBtn {
         width: 100px;
-        padding: 8px 12px;
+        padding: 3% 2% !important;
         font-size: 13px;
         min-height: 40px;
     }
@@ -1287,9 +1417,114 @@ footer hr{
         width: 45%;
         padding: 10px 0;
     }
+
+
+
+
+    #side{
+        width: 100%;
+    }
+
+    #side h3 {
+        font-size: 23px !important;
+    }
+
+    #circl{
+        display: none;
+    }
+
+    #side img{
+        top: 42%;
+        left: 13px;
+        width: 270px;
+    }
+
+    div#bkg {
+    height: 230px;
+    }
+
+    .Hd h2 {
+        font-size: 16px !important;
+    }
+
+    .Hd span {
+        font-size: 14px !important;
+    }
+
+    .Hd .Veiw {
+        width: 23% !important;
+    }
+    
+    #itmsPros{
+        justify-content: left;
+    }
+
+    #itmsPros .itms{
+        width: 47% !important;
+        font-size: 14px;
+    }
+
+        #howitwrk p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    #pay #icn {
+        gap: 3px !important;
+        width: 100% !important;
+    }
+
+    #hmprjCrds {
+        width: 100% !important;
+        margin: 0 24px !important;
+    }
+
+    .slider-nav {
+        width: 100% !important;
+        margin: 0;
+    }
+
+    .slider-prev {
+        left: 15px !important;
+    }
+
+    .slider-next {
+        right: -20px !important;
+    }
+
+    .hmprjC .ovrl {
+        h3 {
+            left: 16px;
+            font-size: 17px;
+        }
+    }
+
+    .slider-dots {
+        margin-left: 39px !important;
+    }
+
+    .eximg {
+        height: auto !important;
+    }
+
+    #exDt{
+        padding-top: 10%;
+    }
+
+        a#addbs button {
+        padding: 11px 11px;
+        font-size: 14px;
+    }
+
+    a#lm button{
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+    }
+
+    .cimg img {
+        border-radius: 10px;
+    }
 }
-
-
 
 /* Mobile */
 @media screen and (max-width: 767px) {
@@ -1859,18 +2094,19 @@ footer hr{
     }
 
     header nav {
-        width: 100%;
-        max-width: 600px;
+        width: 66%;
+        max-width: 512px;
     }
 
     header nav ul li {
         font-size: 16px;
-        padding: 10px 12px;
+        padding: 10px 8px;
     }
 
     #joinBtn {
         padding: 1%;
-        font-size: 14px;
+        font-size: 12px;
+        width: 128px;
     }
 
     form {
@@ -1970,8 +2206,8 @@ footer hr{
     #side img {
         width: 68%;
         position: absolute;
-        top: 83px;
-        left: 296px;
+        top: 167px;
+        left: 237px;
     }
 
     #prj {
@@ -2193,8 +2429,6 @@ footer hr{
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none; /* IE and Edge */
         gap: 16px;
-        padding: 0 20px;
-        margin: 0 -20px;
     }
     
     #hmprjCrds::-webkit-scrollbar {
@@ -2311,10 +2545,6 @@ footer hr{
         padding: 11%;
     }
 
-    .uplstD{
-        width: 147%;
-    }
-
     .uplst h3 {
     font-size: 17px;
     padding: 9px 0 26px;
@@ -2325,6 +2555,42 @@ footer hr{
         justify-content: normal;
     }
 
+    .hmprjC .crdinfo .rt {
+        justify-content: normal;
+        gap: 6%;
+    }
+
+    .hmprjC .crdinfo .rt .rate,.price {
+        font-size: 12px;
+    } 
+
+    .uplst {
+        width: 16%;
+    }
+
+    #mdl{
+        width: 30%;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) and (max-width: 1399px) {
+    #home h1 {
+        font-size: 56px;
+        width: 46%;
+    }
+
+    form {
+        width: 634px;
+    }
+
+    nav {
+        width: 60% !important;
+    }
+
+    #prjLst{
+        padding: 5% 0 0 4%;
+    }
 }
 
 /* Large Desktop */
@@ -2342,16 +2608,8 @@ footer hr{
     form {
         width: 700px;
     }
-}
 
-/* Desktop */
-@media screen and (min-width: 1024px) and (max-width: 1399px) {
-    #home h1 {
-        font-size: 56px;
-        width: 46%;
-    }
-    
-    form {
-        width: 634px;
+    .uplstD {
+        width: 90%;
     }
 }
