@@ -11,12 +11,104 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+
+        <div id="customize">
+            <button>
+                <span>CUSTOMIZE</span>
+                <i class="fa-solid fa-gear"></i>
+            </button>
+        </div>
+
+        <div id="cstmNav">
+            <div id="cstmHead">
+                <h2>Customize theme</h2>
+                <i class="fa-solid fa-xmark" onclick="closeCstmNav()"></i>
+            </div>
+            <hr>
+            <div id="cstmBody">
+                <h3>
+                    <i class="fa-solid fa-palette"></i>
+                    <span>Colors</span>
+                </h3>
+                <div id="clrs">
+                    <div class="clrItm">
+                        <h4>Primary</h4>
+                        <div class="clr">
+                            <span id="primaryColorValue">
+                                #444444
+                            </span>
+                            <form>
+                                <input type="color">
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="clrItm">
+                        <h4>Warning</h4>
+                        <div class="clr">
+                            <span id="primaryColorValue">
+                                #444444
+                            </span>
+                            <form>
+                                <input type="color">
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="clrItm">
+                        <h4>Info</h4>
+                        <div class="clr">
+                            <span id="primaryColorValue">
+                                #444444
+                            </span>
+                            <form>
+                                <input type="color">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="clrItm">
+                        <h4>Success</h4>
+                        <div class="clr">
+                            <span id="primaryColorValue">
+                                #444444
+                            </span>
+                            <form>
+                                <input type="color">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="clrItm">
+                        <h4>Danger</h4>
+                        <div class="clr">
+                            <span id="primaryColorValue">
+                                #444444
+                            </span>
+                            <form>
+                                <input type="color">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
         <header>
+            <!-- toggle btn -->
+                <div onclick="toggleEvent()" id="tgl">
+                    <img src="images/tgl.svg" alt="">
+                </div>
+
             <!-- Logo -->
             <a id="lgo" href="index.html">
                 <img src="images/logo.png" alt="Finder Logo">
                 <span>Finder</span>
             </a>
+
             <!-- navigation -->
             <nav>
                 <ul>
@@ -30,7 +122,17 @@
             </nav>
             <!-- icons -->
             <div id="icn">
-                <i class="fa-regular fa-sun"></i>
+                <i id="snicn" onclick="mode()" class="fa-regular fa-sun"></i>
+                    <div id="mode">
+                        <div id="lightMode" onclick="light()">
+                            <i class="fa-regular fa-sun"></i>
+                            <span>Light</span>
+                        </div>
+                        <div id="darkMode" onclick="dark()">
+                            <i class="fa-regular fa-moon"></i>
+                            <span>Dark</span>
+                        </div>
+                    </div>
                 <i class="fa-regular fa-user"></i>
             </div>
             <!-- join btn -->
@@ -52,6 +154,7 @@
                         <span>
                             |
                         </span>
+                        <hr>
                         <div id="rght">
                             <i class="lni lni-map-marker-5"></i>
                             <input type="text" placeholder="Zip code"/> 
@@ -1033,5 +1136,6 @@
                 </div>
             </section>
         </footer>
+        <script src="js/main.js" type="text/javascript"></script>
     </body>
 </html>
