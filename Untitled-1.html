@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* Hide desktop nav on small screens */
+@media (max-width: 768px) {
+    header nav { display: none; }
+    #tgl { display: block; cursor: pointer; }
+
+    /* Mobile nav styling */
+    #mobileNav {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        width: 250px;
+        height: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        transition: left 0.3s ease;
+        z-index: 1001;
+    }
+    #mobileNav ul {
+        list-style: none;
+        padding: 0;
+    }
+    #mobileNav ul li {
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+    }
+    #mobileNav.show { left: 0; }
+
+    /* Close button */
+    #closeMenu {
+        font-size: 22px;
+        cursor: pointer;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    /* Overlay */
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        z-index: 1000;
+    }
+    #overlay.show { display: block; }
+}
+
+    </style>
+    <!-- toggle btn -->
+<div id="tgl" onclick="toggleMenu()">
+    <img src="images/tgl.svg" alt="">
+</div>
+
+<!-- mobile nav -->
+<div id="mobileNav">
+    <span id="closeMenu" onclick="toggleMenu()">✖</span>
+    <ul>
+        <li>Home</li>
+        <li>Listings</li>
+        <li>Account</li>
+        <li>Pages</li>
+        <li>Docs</li>
+        <li>Components</li>
+    </ul>
+</div>
+<div id="overlay" onclick="toggleMenu()"></div>
+<script>
+function toggleMenu() {
+    document.querySelector('nav').classList.toggle("show");
+    document.getElementById("overlay").classList.toggle("show");
+}
+</script>
+</body>
+</html>

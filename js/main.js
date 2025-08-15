@@ -3,6 +3,7 @@ const modeMenu = document.getElementById('mode');
 const lightBtn = document.getElementById('lightMode');
 const darkBtn = document.getElementById('darkMode');
 
+
 // Toggle menu visibility when clicking the icon
 snicn.addEventListener('click', (e) => {
     e.stopPropagation(); // prevent click from closing instantly
@@ -45,10 +46,12 @@ if (localStorage.getItem('theme') === 'dark') {
 
 document.querySelector("#customize button").addEventListener("click", function() {
     document.getElementById("cstmNav").classList.add("active");
+    document.getElementById("overlay").classList.toggle("show");
 });
 
 function closeCstmNav() {
     document.getElementById("cstmNav").classList.remove("active");
+    document.getElementById("overlay").classList.remove("show");
 }
 
 document.querySelectorAll("#clrs input[type='color']").forEach(input => {
